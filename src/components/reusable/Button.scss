@@ -9,11 +9,25 @@
 	cursor: pointer;
 }
 
+.login-btn {
+	transition: color 0.3s;
+}
+
 .action-btn {
 	background: colors.$cyan;
 	transition: background-color 0.3s;
 
 	&:hover {
 		background-color: colors.$light-cyan;
+	}
+}
+
+@media (min-width: 1440px) {
+	.login-btn {
+		color: colors.$grayish-violet;
+
+		&:hover {
+			color: colors.$dark-gray;
+		}
 	}
 }

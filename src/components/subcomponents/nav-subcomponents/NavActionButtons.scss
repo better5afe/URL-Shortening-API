@@ -11,3 +11,19 @@
 		}
 	}
 }
+
+@media (min-width: 1440px) {
+	.nav {
+		&__btns {
+			flex-direction: row;
+
+			&-button {
+				padding: .5em 1.5em;
+				
+				&:first-of-type {
+					margin-right: 2em;
+				}
+			}
+		}
+	}
+}

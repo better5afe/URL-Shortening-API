@@ -53,6 +53,13 @@
 
 @media (min-width: 1440px) {
 	.nav {
+		justify-content: flex-start;
+		align-items: center;
+
+		&__logo {
+			margin-right: 3em;
+		}
+
 		&__btn {
 			display: none;
 		}

@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import NavListMobile from '../subcomponents/nav-subcomponents/NavListMobile';
+import NavListDesktop from '../subcomponents/nav-subcomponents/NavListDesktop';
 import { CSSTransition } from 'react-transition-group';
 
 import './Nav.scss';
@@ -17,7 +18,7 @@ const Nav = () => {
 
 	return (
 		<nav id='nav' className='nav'>
-			<a href='#'>
+			<a href='#' className='nav__logo'>
 				<svg xmlns='http://www.w3.org/2000/svg' width='121' height='33'>
 					<path
 						fill='#34313D'
@@ -28,6 +29,7 @@ const Nav = () => {
 			<button className='nav__btn' onClick={toggleNavHandler}>
 				<i className='fa-solid fa-bars'></i>
 			</button>
+
 			<CSSTransition
 				in={isNavOpen}
 				timeout={300}
@@ -37,6 +39,8 @@ const Nav = () => {
 			>
 				<NavListMobile onClick={() => setIsNavOpen(false)} />
 			</CSSTransition>
+
+			<NavListDesktop />
 		</nav>
 	);
 };

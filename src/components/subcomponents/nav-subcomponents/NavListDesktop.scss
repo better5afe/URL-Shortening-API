@@ -1,0 +1,41 @@
+@use '../../../assets/colors.scss';
+
+.nav {
+	&__container {
+		&--desktop {
+			display: none;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+			color: colors.$grayish-violet;
+		}
+	}
+
+	&__list {
+		&--desktop {
+			display: flex;
+		}
+
+		&-item {
+			&--desktop {
+				margin-right: 1.5em;
+				cursor: pointer;
+				transition: color 0.3s;
+
+				&:hover {
+					color: colors.$dark-gray;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1440px) {
+	.nav {
+		&__container {
+			&--desktop {
+				display: flex;
+			}
+		}
+	}
+}
