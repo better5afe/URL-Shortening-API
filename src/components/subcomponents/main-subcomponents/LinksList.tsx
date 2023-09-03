@@ -1,6 +1,7 @@
+import { useState } from 'react';
 import LinkCard from './LinkCard';
 
-import './LinksList.scss'
+import './LinksList.scss';
 
 const dummyData = [
 	{
@@ -16,6 +17,13 @@ const dummyData = [
 ];
 
 const LinksList = () => {
+	const [copiedId, setCopiedId] = useState<null | number>(null);
+
+	const copyLinkHandler = (id: number, text: string) => {
+		setCopiedId(id);
+		navigator.clipboard.writeText(text);
+	};
+
 	return (
 		<ul className='links-list'>
 			{dummyData.map((data) => (
@@ -24,6 +32,8 @@ const LinksList = () => {
 					id={data.id}
 					fullLink={data.fullLink}
 					shortenedLink={data.shortenedLink}
+					isCopied={copiedId === data.id}
+					onCopy={() => copyLinkHandler(data.id, data.shortenedLink)}
 				/>
 			))}
 		</ul>
