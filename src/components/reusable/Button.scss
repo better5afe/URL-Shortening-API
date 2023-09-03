@@ -1,6 +1,7 @@
 @use '../../assets/colors.scss';
 
 .button {
+	width: 100%;
 	background: transparent;
 	border: 1px solid transparent;
 	border-radius: 30px;
@@ -22,7 +23,17 @@
 	}
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 768px) {
+	.button {
+		width: 50%;
+	}
+}
+
+@media (min-width: 992px) {
+	.button {
+		width: auto;
+	}
+
 	.login-btn {
 		color: colors.$grayish-violet;
 

@@ -3,6 +3,8 @@
 .nav {
 	&__btns {
 		display: flex;
+		justify-content: center;
+		align-items: center;
 		flex-direction: column;
 
 		&-btn {
@@ -12,7 +14,7 @@
 	}
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 992px) {
 	.nav {
 		&__btns {
 			flex-direction: row;
