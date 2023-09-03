@@ -1,0 +1,13 @@
+@use '../../../assets/colors.scss';
+
+.nav {
+	&__btns {
+		display: flex;
+		flex-direction: column;
+
+		&-button {
+			padding: .5em 0;
+			margin: .3em 0;
+		}
+	}
+}

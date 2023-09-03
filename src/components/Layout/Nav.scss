@@ -1,0 +1,60 @@
+@use '../../assets/colors.scss';
+
+.nav {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+	color: colors.$white;
+	font-weight: bold;
+
+	&__btn {
+		background: transparent;
+		border: none;
+		outline: none;
+		cursor: pointer;
+
+		.fa-bars {
+			font-size: 25px;
+			color: colors.$grayish-violet;
+			transition: color 0.3s;
+		}
+
+		&:hover {
+			.fa-bars {
+				color: colors.$dark-gray;
+			}
+		}
+	}
+
+	&__list {
+		list-style-type: none;
+	}
+}
+
+.slide-enter {
+	transform: scaleY(0);
+	opacity: 0;
+}
+.slide-enter-active {
+	transform: scaleY(1);
+	opacity: 1;
+	transition: opacity 500ms, transform 500ms;
+}
+.slide-exit {
+	transform: scaleY(1);
+	opacity: 1;
+}
+.slide-exit-active {
+	transform: scaleY(0);
+	opacity: 0;
+	transition: opacity 500ms, transform 500ms;
+}
+
+@media (min-width: 1440px) {
+	.nav {
+		&__btn {
+			display: none;
+		}
+	}
+}

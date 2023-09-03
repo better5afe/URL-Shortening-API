@@ -1,0 +1,45 @@
+@use '../../../assets/colors.scss';
+
+.nav {
+	&__container {
+		&--mobile {
+			position: absolute;
+			right: 0;
+			bottom: -360px;
+			left: 0;
+			padding: 1.5em;
+			background: colors.$dark-violet;
+			border-radius: 10px;
+			text-align: center;
+			transform-origin: top;
+		}
+
+		hr {
+			border-width: 1px;
+			border-color: colors.$grayish-violet;
+		}
+	}
+
+	&__list {
+		&-item {
+			&--mobile {
+				padding: 0.5em 0;
+				margin: 0.5em 0;
+
+				&:last-of-type {
+					margin-bottom: 1em;
+				}
+			}
+		}
+	}
+}
+
+@media (min-width: 1440px) {
+	nav {
+		&__container {
+			&--mobile {
+				display: none;
+			}
+		}
+	}
+}

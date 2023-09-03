@@ -9,6 +9,20 @@
 }
 
 body {
+	background: colors.$white;
+	color: colors.$grayish-violet;
+}
+
+body,
+button,
+input,
+input::placeholder {
 	font-family: 'Poppins', sans-serif;
 	font-size: 18px;
+}
+
+.wrapper {
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 1.5em 1em;
 }

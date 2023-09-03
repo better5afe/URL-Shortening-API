@@ -1,0 +1,19 @@
+@use '../../assets/colors.scss';
+
+.button {
+	background: transparent;
+	border: 1px solid transparent;
+	border-radius: 30px;
+	color: colors.$white;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.action-btn {
+	background: colors.$cyan;
+	transition: background-color 0.3s;
+
+	&:hover {
+		background-color: colors.$light-cyan;
+	}
+}

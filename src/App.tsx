@@ -1,5 +1,17 @@
+import Nav from './components/Layout/Nav';
+import Header from './components/Layout/Header';
+import Main from './components/Layout/Main';
+import Footer from './components/Layout/Footer';
+
 const App = () => {
-	return <h1>App</h1>;
+	return (
+		<div className='wrapper'>
+			<Nav />
+			<Header />
+			<Main />
+			<Footer />
+		</div>
+	);
 };
 
 export default App;
