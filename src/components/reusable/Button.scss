@@ -1,7 +1,7 @@
 @use '../../assets/colors.scss';
 
 .button {
-	padding: .8em 2em;
+	padding: 0.8em 2em;
 	background: transparent;
 	border: 1px solid transparent;
 	border-radius: 30px;
@@ -14,6 +14,11 @@
 	transition: color 0.3s;
 }
 
+.squared-btn {
+	width: 100%;
+	border-radius: 5px;
+}
+
 .action-btn {
 	background: colors.$cyan;
 	transition: background-color 0.3s;
@@ -23,6 +28,10 @@
 	}
 }
 
+.copied-btn {
+	background: colors.$dark-violet;
+}
+
 @media (min-width: 992px) {
 	.login-btn {
 		color: colors.$grayish-violet;
@@ -30,5 +39,9 @@
 		&:hover {
 			color: colors.$dark-gray;
 		}
+	}
+
+	.squared-btn {
+		width: auto;
 	}
 }

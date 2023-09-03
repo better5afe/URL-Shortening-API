@@ -24,7 +24,7 @@ const LinkForm = () => {
 			</div>
 			<Button
 				text='Shorten it!'
-				className='form__btn action-btn'
+				className='squared-btn action-btn'
 				type='submit'
 			/>
 

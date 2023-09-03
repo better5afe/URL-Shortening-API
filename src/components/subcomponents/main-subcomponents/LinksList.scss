@@ -1,0 +1,15 @@
+.links-list {
+	padding-top: 70px;
+}
+
+@media (min-width: 786px) {
+	.links-list {
+		padding-top: 80px;
+	}
+}
+
+@media (min-width: 992px) {
+	.links-list {
+		padding-top: 45px;
+	}
+}

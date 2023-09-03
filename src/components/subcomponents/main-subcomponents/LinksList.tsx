@@ -1,5 +1,7 @@
 import LinkCard from './LinkCard';
 
+import './LinksList.scss'
+
 const dummyData = [
 	{
 		id: Math.random(),
@@ -15,7 +17,7 @@ const dummyData = [
 
 const LinksList = () => {
 	return (
-		<ul>
+		<ul className='links-list'>
 			{dummyData.map((data) => (
 				<LinkCard
 					key={data.id}
