@@ -1,0 +1,73 @@
+@use '../../../assets/colors.scss';
+
+.form {
+	position: absolute;
+	top: -120px;
+	right: 0;
+	left: 0;
+	padding: 1.5em 1em;
+	background: colors.$dark-violet;
+	border-radius: 10px;
+
+	&__input {
+		padding: 0.5em 1em;
+		width: 100%;
+		border: 2px solid transparent;
+		border-radius: 5px;
+		outline: none;
+	}
+
+	.input-error {
+		border: 2px solid colors.$red;
+
+		&::placeholder {
+			color: colors.$red;
+		}
+	}
+
+	&__message {
+		margin: 0.5em 0 1em;
+		font-size: 13px;
+		font-style: italic;
+		color: colors.$red;
+	}
+
+	&__btn {
+		width: 100%;
+		border-radius: 5px;
+	}
+}
+
+@media (min-width: 992px) {
+	.form {
+		top: -150px;
+		display: flex;
+		justify-content: space-between;
+		align-items: start;
+		padding: 3em 4em;
+
+		&__actions {
+			width: 75%;
+		}
+
+		&__input {
+			padding: 0.7em 1em;
+		}
+
+		&__message {
+			margin-bottom: 0;
+		}
+
+		&__btn {
+			width: auto;
+		}
+	}
+}
+
+@media (min-width: 1440px) {
+	.form {
+		&__actions {
+			width: 83%;
+		}
+	}
+}

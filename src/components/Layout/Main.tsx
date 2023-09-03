@@ -1,10 +1,15 @@
-import './Main.scss'
+import LinkShorteningSection from '../subcomponents/main-subcomponents/LinkShorteningSection';
+import StatisticsSection from '../subcomponents/main-subcomponents/StatisticsSection';
+
+import './Main.scss';
 
 const Main = () => {
 	return (
-		<main>
-			<section>Section 1</section>
-			<section>Section 2</section>
+		<main className='main'>
+			<div className='wrapper main__wrapper'>
+				<LinkShorteningSection />
+				<StatisticsSection />
+			</div>
 		</main>
 	);
 };

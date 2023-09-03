@@ -1,5 +1,11 @@
 const Footer = () => {
-	return <h1>Footer</h1>;
+	return (
+		<footer>
+			<div className='wrapper footer__wrapper'>
+				<p>footer</p>
+			</div>
+		</footer>
+	);
 };
 
 export default Footer;

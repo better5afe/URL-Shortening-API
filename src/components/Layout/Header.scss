@@ -1,8 +1,10 @@
 @use '../../assets/colors.scss';
 
 .header {
+	margin: 2em 0 8em;
+	
 	&__wrapper {
-		margin: 2em 0;
+	
 		text-align: center;
 	}
 

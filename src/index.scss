@@ -9,6 +9,7 @@
 }
 
 body {
+	padding: 2em 0;
 	background: colors.$white;
 	color: colors.$grayish-violet;
 }
@@ -24,7 +25,7 @@ input::placeholder {
 .wrapper {
 	max-width: 1400px;
 	margin: 0 auto;
-	padding: 1.5em 1em;
+	padding: 0 1em;
 }
 
 @media (min-width: 768px) {
