@@ -8,6 +8,8 @@
 	padding: 1.5em 1em;
 	background: colors.$dark-violet;
 	border-radius: 10px;
+	overflow: hidden;
+	z-index: 1;
 
 	&__input {
 		padding: 0.5em 1em;
@@ -35,6 +37,40 @@
 	&__btn {
 		width: 100%;
 		border-radius: 5px;
+	}
+
+	&__icon {
+		position: absolute;
+		z-index: -1;
+
+		&--mobile {
+			top: 0;
+			right: 0;
+		}
+
+		&--desktop {
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			display: none;
+			width: 100%;
+			height: 100%;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.form {
+		&__icon {
+			&--mobile {
+				display: none;
+			}
+
+			&--desktop {
+				display: block;
+			}
+		}
 	}
 }
 

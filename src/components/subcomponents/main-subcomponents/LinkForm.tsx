@@ -1,4 +1,6 @@
 import Button from '../../reusable/Button';
+import FormBackgroundMobile from '../../../assets/icons/background-icons/FormBackgroundMobile';
+import FormBackgroundDesktop from '../../../assets/icons/background-icons/FormBackgroundDesktop';
 
 import './LinkForm.scss';
 
@@ -25,6 +27,9 @@ const LinkForm = () => {
 				className='form__btn action-btn'
 				type='submit'
 			/>
+
+			<FormBackgroundMobile className='form__icon form__icon--mobile' />
+			<FormBackgroundDesktop className='form__icon form__icon--desktop' />
 		</form>
 	);
 };
