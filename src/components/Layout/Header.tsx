@@ -9,7 +9,7 @@ const Header = () => {
 			<img src={heroBg} alt='' className='header__img' />
 			<div className='header__text'>
 				<h1 className="header__title">More than just shorter links</h1>
-				<p className='header__text'>
+				<p className='header__info'>
 					Build your brand's recognition and detailed insights on how your links
 					are performing.
 				</p>
