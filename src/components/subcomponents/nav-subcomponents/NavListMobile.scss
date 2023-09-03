@@ -4,9 +4,9 @@
 	&__container {
 		&--mobile {
 			position: absolute;
-			right: 0;
-			bottom: -360px;
-			left: 0;
+			right: 0.8em;
+			bottom: -300px;
+			left: 0.8em;
 			padding: 1.5em;
 			background: colors.$dark-violet;
 			border-radius: 10px;
@@ -29,6 +29,16 @@
 				&:last-of-type {
 					margin-bottom: 1em;
 				}
+			}
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.nav {
+		&__container {
+			&--mobile {
+				bottom: -320px;
 			}
 		}
 	}

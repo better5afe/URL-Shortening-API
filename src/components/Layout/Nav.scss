@@ -1,12 +1,14 @@
 @use '../../assets/colors.scss';
 
 .nav {
-	position: relative;
-	display: flex;
-	justify-content: space-between;
-	align-items: start;
-	color: colors.$white;
-	font-weight: bold;
+	&__wrapper {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		align-items: start;
+		color: colors.$white;
+		font-weight: bold;
+	}
 
 	&__btn {
 		background: transparent;
@@ -53,8 +55,10 @@
 
 @media (min-width: 992px) {
 	.nav {
-		justify-content: flex-start;
-		align-items: center;
+		&__wrapper {
+			justify-content: flex-start;
+			align-items: center;
+		}
 
 		&__logo {
 			margin-right: 3em;

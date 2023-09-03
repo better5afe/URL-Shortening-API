@@ -1,8 +1,10 @@
 @use '../../assets/colors.scss';
 
 .header {
-	margin: 2em 0;
-	text-align: center;
+	&__wrapper {
+		margin: 2em 0;
+		text-align: center;
+	}
 
 	&__img {
 		width: 100%;
@@ -20,14 +22,17 @@
 
 @media (min-width: 992px) {
 	.header {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		text-align: left;
+		&__wrapper {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin: 4em 0;
+			text-align: left;
+		}
 
 		&__img {
 			width: 45%;
-            margin-left: 1em;
+			margin-left: 1em;
 			order: 1;
 		}
 
@@ -41,6 +46,10 @@
 
 @media (min-width: 1440px) {
 	.header {
+		&__img {
+			margin: 0;
+		}
+
 		&__text {
 			width: 40%;
 		}
