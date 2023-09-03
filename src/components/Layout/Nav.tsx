@@ -30,6 +30,8 @@ const Nav = () => {
 				<i className='fa-solid fa-bars'></i>
 			</button>
 
+			<NavListDesktop />
+
 			<CSSTransition
 				in={isNavOpen}
 				timeout={300}
@@ -40,7 +42,7 @@ const Nav = () => {
 				<NavListMobile onClick={() => setIsNavOpen(false)} />
 			</CSSTransition>
 
-			<NavListDesktop />
+			
 		</nav>
 	);
 };
