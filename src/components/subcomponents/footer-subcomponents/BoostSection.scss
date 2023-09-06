@@ -1,0 +1,48 @@
+@use '../../../assets/colors.scss';
+
+.boost-section {
+	position: relative;
+	padding: 6em 0;
+	background: colors.$dark-violet;
+	text-align: center;
+	z-index: 0;
+	overflow: hidden;
+
+	&__title {
+		margin-bottom: 1em;
+		color: colors.$white;
+	}
+
+	&__icon {
+		position: absolute;
+		top: 0;
+		z-index: -1;
+
+		&--mobile {
+			left: 0;
+		}
+
+		&--desktop {
+			top: 0;
+			height: 100%;
+			width: 100%;
+			display: none;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.boost-section {
+		padding: 4em 0;
+
+		&__icon {
+			&--mobile {
+				display: none;
+			}
+
+			&--desktop {
+				display: block;
+			}
+		}
+	}
+}
