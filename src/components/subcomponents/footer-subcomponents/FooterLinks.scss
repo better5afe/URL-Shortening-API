@@ -1,0 +1,52 @@
+@use '../../../assets/colors.scss';
+
+.footer-links {
+	padding: 2.5em 0 1em;
+	background: colors.$very-dark-violet;
+	text-align: center;
+
+	&__logo {
+		margin-bottom: 2em;
+	}
+
+	&__column {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 1.5em;
+
+		&--socials {
+			flex-direction: row;
+			justify-content: space-evenly;
+			align-items: center;
+			margin-top: 2em;
+		}
+
+		&-title {
+			margin-bottom: 0.8em;
+			color: colors.$white;
+		}
+
+		&-link {
+			margin-bottom: 0.5em;
+			text-decoration: none;
+			color: colors.$grayish-violet;
+			transition: color 0.3s;
+
+			svg {
+				path {
+					transition: fill 0.3s;
+				}
+			}
+
+			&:hover {
+				color: colors.$cyan;
+
+				svg {
+					path {
+						fill: colors.$cyan;
+					}
+				}
+			}
+		}
+	}
+}
