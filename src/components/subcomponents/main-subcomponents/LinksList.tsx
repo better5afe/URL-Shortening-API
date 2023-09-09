@@ -1,23 +1,13 @@
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import LinkCard from './LinkCard';
+import { LinkContext } from '../../../context/link-context';
 
 import './LinksList.scss';
 
-const dummyData = [
-	{
-		id: Math.random(),
-		fullLink: `https://www.frontendmentor.io`,
-		shortenedLink: `https://rel.link/k4lKyk`,
-	},
-	{
-		id: Math.random(),
-		fullLink: `https://www.twitter.com`,
-		shortenedLink: `https://rel.link/njgjd62`,
-	},
-];
-
 const LinksList = () => {
 	const [copiedId, setCopiedId] = useState<null | number>(null);
+
+	const linkCtx = useContext(LinkContext);
 
 	const copyLinkHandler = (id: number, text: string) => {
 		setCopiedId(id);
@@ -26,14 +16,14 @@ const LinksList = () => {
 
 	return (
 		<ul className='links-list'>
-			{dummyData.map((data) => (
+			{linkCtx.shortenedLinks.map((link) => (
 				<LinkCard
-					key={data.id}
-					id={data.id}
-					fullLink={data.fullLink}
-					shortenedLink={data.shortenedLink}
-					isCopied={copiedId === data.id}
-					onCopy={() => copyLinkHandler(data.id, data.shortenedLink)}
+					key={link.id}
+					id={link.id}
+					fullLink={link.fullLink}
+					shortenedLink={link.shortenedLink}
+					isCopied={copiedId === link.id}
+					onCopy={() => copyLinkHandler(link.id, link.shortenedLink)}
 				/>
 			))}
 		</ul>

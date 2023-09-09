@@ -17,13 +17,13 @@
 		border: 2px solid transparent;
 		border-radius: 5px;
 		outline: none;
-	}
+		
+		&--error {
+			border: 2px solid colors.$red;
 
-	.input-error {
-		border: 2px solid colors.$red;
-
-		&::placeholder {
-			color: colors.$red;
+			&::placeholder {
+				color: colors.$red;
+			}
 		}
 	}
 
@@ -32,6 +32,11 @@
 		font-size: 13px;
 		font-style: italic;
 		color: colors.$red;
+		opacity: 0;
+
+		&--error {
+			opacity: 1;
+		}
 	}
 
 	&__icon {
@@ -88,7 +93,6 @@
 		&__message {
 			margin-bottom: 0;
 		}
-
 	}
 }
 

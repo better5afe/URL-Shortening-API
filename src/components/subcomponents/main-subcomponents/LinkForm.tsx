@@ -1,15 +1,34 @@
+import { useRef, useContext } from 'react';
 import Button from '../../reusable/Button';
 import FormBackgroundMobile from '../../../assets/icons/background-icons/FormBackgroundMobile';
 import FormBackgroundDesktop from '../../../assets/icons/background-icons/FormBackgroundDesktop';
+import { LinkContext } from '../../../context/link-context';
 
 import './LinkForm.scss';
 
-// class to be added to input on error: input-error
-
 const LinkForm = () => {
+	const linkCtx = useContext(LinkContext);
+
+	const inputRef = useRef<HTMLInputElement | null>(null);
+
+	let inputClass = 'form__input';
+	let msgClass = 'form__message';
+	let msg = linkCtx.error.errorMsg
+		? linkCtx.error.errorMsg
+		: 'Please add a link';
+
+	if (linkCtx.error.isError) {
+		msgClass = 'form__message form__message--error';
+		inputClass = 'form__input form__input--error';
+	}
+
 	const shortenLinkHandler = (event: React.FormEvent) => {
 		event.preventDefault();
-		console.log('shortened');
+
+		if (inputRef.current) {
+			linkCtx.shortenLinkHandler(inputRef.current.value);
+			inputRef.current.value = '';
+		}
 	};
 
 	return (
@@ -18,9 +37,10 @@ const LinkForm = () => {
 				<input
 					type='text'
 					placeholder='Shorten a link here...'
-					className='form__input'
+					className={inputClass}
+					ref={inputRef}
 				/>
-				<p className='form__message'>Please add a link</p>
+				<p className={msgClass}>{msg}</p>
 			</div>
 			<Button
 				text='Shorten it!'
