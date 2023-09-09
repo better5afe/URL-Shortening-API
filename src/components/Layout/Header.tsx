@@ -14,7 +14,7 @@ const Header = () => {
 						Build your brand's recognition and detailed insights on how your
 						links are performing.
 					</p>
-					<Button text='Get Started' className='action-btn' type='button'/>
+					<Button text='Get Started' className='action-btn' type='button' />
 				</div>
 			</div>
 		</header>

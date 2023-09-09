@@ -2,14 +2,18 @@
 
 .header {
 	margin: 2em 0 8em;
-	
+	overflow: hidden;
+
 	&__wrapper {
-	
 		text-align: center;
 	}
 
-	&__img {
+	&__test {
 		width: 100%;
+	}
+
+	&__img {
+		width: 150%;
 	}
 
 	&__title {
@@ -33,9 +37,13 @@
 		}
 
 		&__img {
-			width: 45%;
-			margin-left: 1em;
+			width: 55%;
+			margin-left: 5em;
 			order: 1;
+		}
+
+		&__text {
+			min-width: 45%;
 		}
 
 		&__title {
@@ -49,11 +57,8 @@
 @media (min-width: 1440px) {
 	.header {
 		&__img {
-			margin: 0;
-		}
-
-		&__text {
-			width: 40%;
+			min-width: 65%;
+			margin-left: 8em;
 		}
 
 		&__title {
@@ -62,6 +67,7 @@
 
 		&__info {
 			font-size: 20px;
+			padding-right: 4em;
 		}
 	}
 }
