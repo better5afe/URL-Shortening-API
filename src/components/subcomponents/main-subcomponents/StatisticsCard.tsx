@@ -15,8 +15,12 @@ const StatisticsCard: React.FC<StatisticsCardProps> = ({
 	text,
 	className,
 }) => {
+
 	return (
-		<div id={id} className={`statistics-card statistics-card--${className}`}>
+		<div
+			id={id}
+			className={`statistics-card statistics-card--${className}`}
+		>
 			<div className='statistics-card__icon'>{icon}</div>
 			<h3 className='statistics-card__title'>{title}</h3>
 			<p className='statistics-card__text'>{text}</p>

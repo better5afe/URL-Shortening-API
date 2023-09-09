@@ -39,17 +39,20 @@
 	.statistics-card {
 		margin: 0 1.5em 0 0;
 
-		&--recognition {
-			align-self: start;
-		}
-
 		&--customizable {
-			align-self: end;
 			margin: 0;
 		}
 
 		&__icon {
 			left: 20%;
 		}
+	}
+
+	.recognition {
+		align-self: start;
+	}
+
+	.customizable {
+		align-self: end;
 	}
 }

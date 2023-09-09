@@ -1,9 +1,16 @@
+import { motion } from 'framer-motion';
+import { useMediaQuery } from 'react-responsive';
 import StatisticsCard from './StatisticsCard';
-
 import './StatisticsCardsBox.scss';
 
 const StatisticsCardsBox = () => {
+	const isDesktop = useMediaQuery({ query: '(min-width: 1200px)' });
 
+	const initial = isDesktop ? { y: -200, opacity: 0 } : { x: -100, opacity: 0 };
+	const initialRight = isDesktop
+		? { y: -200, opacity: 0 }
+		: { x: 100, opacity: 0 };
+	const whileInView = isDesktop ? { y: 0, opacity: 1 } : { x: 0, opacity: 1 };
 
 	const iconRecognition = (
 		<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'>
@@ -34,30 +41,55 @@ const StatisticsCardsBox = () => {
 
 	return (
 		<div className='statistics-cards-box'>
-			<StatisticsCard
-				id='recognition'
-				icon={iconRecognition}
-				title='Brand Recognition'
-				text={`Boost your brand recognition with each click. Generic links don’t 
-  mean a thing. Branded links help instil confidence in your content.`}
+			<motion.div
 				className='recognition'
-			/>
-			<StatisticsCard
-				id='records'
-				icon={iconRecords}
-				title='Detailed Records'
-				text='Gain insights into who is clicking your links. Knowing when and where 
-  people engage with your content helps inform better decisions.'
+				initial={initial}
+				whileInView={whileInView}
+				viewport={{ once: true }}
+				transition={{ ease: 'linear', duration: 0.5, delay: 0.5 }}
+			>
+				<StatisticsCard
+					id='recognition'
+					className='recognition'
+					icon={iconRecognition}
+					title='Brand Recognition'
+					text={`Boost your brand recognition with each click. Generic links don’t 
+  mean a thing. Branded links help instil confidence in your content.`}
+				/>
+			</motion.div>
+			<motion.div
 				className='records'
-			/>
-			<StatisticsCard
-				id='customizable'
-				icon={iconCustomizable}
-				title='Fully Customizable'
-				text='Improve brand awareness and content discoverability through customizable 
-  links, supercharging audience engagement.'
+				initial={initialRight}
+				whileInView={whileInView}
+				viewport={{ once: true }}
+				transition={{ ease: 'linear', duration: 0.5, delay: 1 }}
+			>
+				<StatisticsCard
+					id='records'
+					className='records'
+					icon={iconRecords}
+					title='Detailed Records'
+					text='Gain insights into who is clicking your links. Knowing when and where 
+  people engage with your content helps inform better decisions.'
+				/>
+			</motion.div>
+
+			<motion.div
 				className='customizable'
-			/>
+				initial={initial}
+				whileInView={whileInView}
+				viewport={{ once: true }}
+				transition={{ ease: 'linear', duration: 0.5, delay: 1.8 }}
+			>
+				<StatisticsCard
+					id='customizable'
+					className='customizable'
+					icon={iconCustomizable}
+					title='Fully Customizable'
+					text='Improve brand awareness and content discoverability through customizable 
+  links, supercharging audience engagement.'
+				/>
+			</motion.div>
 		</div>
 	);
 };
