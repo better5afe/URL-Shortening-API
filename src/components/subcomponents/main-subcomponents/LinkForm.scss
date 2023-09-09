@@ -75,7 +75,7 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: start;
-		padding: 3em 4em;
+		padding: calc(3em + 20px) 4em 3em;
 
 		&__actions {
 			width: 75%;
