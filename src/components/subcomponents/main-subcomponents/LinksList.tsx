@@ -25,7 +25,7 @@ const LinksList = () => {
 					isCopied={copiedId === link.id}
 					onCopy={() => copyLinkHandler(link.id, link.shortenedLink)}
 				/>
-			))}
+			)).reverse()}
 		</ul>
 	);
 };
