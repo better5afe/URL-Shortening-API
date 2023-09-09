@@ -1,0 +1,6 @@
+{
+  "short_name": "URL Shortening API",
+  "name": "URL Shortening API",
+   "start_url": ".",
+  "display": "standalone"
+ }
