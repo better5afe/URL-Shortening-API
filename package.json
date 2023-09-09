@@ -46,6 +46,8 @@
     ]
   },
   "devDependencies": {
-    "@svgr/webpack": "^8.1.0"
-  }
+    "@svgr/webpack": "^8.1.0",
+    "gh-pages": "^6.0.0"
+  },
+  "homepage": "https://better5afe.github.io/URL-Shortening-API"
 }
