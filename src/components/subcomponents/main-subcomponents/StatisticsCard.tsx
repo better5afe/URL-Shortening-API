@@ -1,6 +1,7 @@
 import './StatisticsCard.scss';
 
 interface StatisticsCardProps {
+	id: string;
 	icon: any;
 	title: string;
 	text: string;
@@ -8,13 +9,14 @@ interface StatisticsCardProps {
 }
 
 const StatisticsCard: React.FC<StatisticsCardProps> = ({
+	id,
 	icon,
 	title,
 	text,
 	className,
 }) => {
 	return (
-		<div className={`statistics-card statistics-card--${className}`}>
+		<div id={id} className={`statistics-card statistics-card--${className}`}>
 			<div className='statistics-card__icon'>{icon}</div>
 			<h3 className='statistics-card__title'>{title}</h3>
 			<p className='statistics-card__text'>{text}</p>

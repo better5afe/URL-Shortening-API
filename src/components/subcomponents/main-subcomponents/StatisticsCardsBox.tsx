@@ -1,8 +1,10 @@
 import StatisticsCard from './StatisticsCard';
 
-import './StatisticsCardsBox.scss'
+import './StatisticsCardsBox.scss';
 
 const StatisticsCardsBox = () => {
+
+
 	const iconRecognition = (
 		<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'>
 			<path
@@ -33,25 +35,28 @@ const StatisticsCardsBox = () => {
 	return (
 		<div className='statistics-cards-box'>
 			<StatisticsCard
+				id='recognition'
 				icon={iconRecognition}
 				title='Brand Recognition'
 				text={`Boost your brand recognition with each click. Generic links don’t 
   mean a thing. Branded links help instil confidence in your content.`}
-                className='recognition'
+				className='recognition'
 			/>
 			<StatisticsCard
+				id='records'
 				icon={iconRecords}
 				title='Detailed Records'
 				text='Gain insights into who is clicking your links. Knowing when and where 
   people engage with your content helps inform better decisions.'
-                className='records'
+				className='records'
 			/>
 			<StatisticsCard
+				id='customizable'
 				icon={iconCustomizable}
 				title='Fully Customizable'
 				text='Improve brand awareness and content discoverability through customizable 
   links, supercharging audience engagement.'
-                className='customizable'
+				className='customizable'
 			/>
 		</div>
 	);

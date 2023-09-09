@@ -1,4 +1,5 @@
 @use '../../assets/colors.scss';
+@use '../../assets/animations.scss';
 
 .header {
 	margin: 2em 0 8em;
@@ -8,12 +9,17 @@
 		text-align: center;
 	}
 
-	&__test {
-		width: 100%;
-	}
-
 	&__img {
 		width: 150%;
+		opacity: 0;
+		animation: slide-in 1s cubic-bezier(0.09, 0.91, 0.68, 0.9) forwards;
+		animation-delay: 0.8s;
+	}
+
+	&__text {
+		margin-bottom: 1em;
+		opacity: 0;
+		animation: fade-in 1s ease-in forwards;
 	}
 
 	&__title {
@@ -23,6 +29,11 @@
 
 	&__info {
 		margin-bottom: 1.8em;
+	}
+
+	&__btn {
+		animation: pulse 2s infinite cubic-bezier(0.4, 0, 0.2, 1);
+		animation-delay: 2s;
 	}
 }
 
@@ -42,14 +53,14 @@
 			order: 1;
 		}
 
-		&__text {
-			min-width: 45%;
-		}
-
 		&__title {
 			margin: 0;
 			font-size: 60px;
 			line-height: 1.2;
+		}
+
+		&__text {
+			min-width: 45%;
 		}
 	}
 }

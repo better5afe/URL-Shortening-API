@@ -1,4 +1,6 @@
 @use '../../../assets/colors.scss';
+@use '../../../assets/animations.scss';
+
 
 .boost-section {
 	position: relative;
@@ -11,6 +13,10 @@
 	&__title {
 		margin-bottom: 1em;
 		color: colors.$white;
+	}
+
+	&__btn {
+		animation: pulse-no-fade 2s infinite cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
 	&__icon {

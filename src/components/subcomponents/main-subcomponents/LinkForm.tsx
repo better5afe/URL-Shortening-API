@@ -32,7 +32,7 @@ const LinkForm = () => {
 	};
 
 	return (
-		<form className='form' onSubmit={shortenLinkHandler}>
+		<form id='form' className='form' onSubmit={shortenLinkHandler}>
 			<div className='form__actions'>
 				<input
 					type='text'
