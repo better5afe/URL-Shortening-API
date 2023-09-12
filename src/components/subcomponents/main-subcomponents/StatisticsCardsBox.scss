@@ -2,6 +2,9 @@
 
 .statistics-cards-box {
 	position: relative;
+	padding-top: 5em;
+	overflow: hidden;
+
 
 	&::before {
 		position: absolute;
@@ -22,6 +25,7 @@
 		justify-content: center;
 		align-items: center;
 		min-height: 400px;
+		padding-top: 0;
 
 		&::before {
 			top: 50%;

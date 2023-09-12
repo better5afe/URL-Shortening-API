@@ -22,6 +22,11 @@ input::placeholder {
 	font-size: 15px;
 }
 
+.header {
+	max-width: 100vw;
+	overflow: hidden;
+}
+
 .wrapper {
 	max-width: 1400px;
 	margin: 0 auto;
