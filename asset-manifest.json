@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/URL-Shortening-API/static/css/main.c44b643d.css",
+    "main.css": "/URL-Shortening-API/static/css/main.c68174d6.css",
     "main.js": "/URL-Shortening-API/static/js/main.f8b599b5.js",
     "static/media/header-hero-bg.png": "/URL-Shortening-API/static/media/header-hero-bg.f081e9cd3e621b3aeac6.png",
     "index.html": "/URL-Shortening-API/index.html",
-    "main.c44b643d.css.map": "/URL-Shortening-API/static/css/main.c44b643d.css.map",
+    "main.c68174d6.css.map": "/URL-Shortening-API/static/css/main.c68174d6.css.map",
     "main.f8b599b5.js.map": "/URL-Shortening-API/static/js/main.f8b599b5.js.map"
   },
   "entrypoints": [
-    "static/css/main.c44b643d.css",
+    "static/css/main.c68174d6.css",
     "static/js/main.f8b599b5.js"
   ]
 }
